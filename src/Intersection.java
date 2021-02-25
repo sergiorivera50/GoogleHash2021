@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
 public class Intersection {
+    public ArrayList<Street> getInStreets() {
+        return inStreets;
+    }
+
     private ArrayList<Street> inStreets;
     private Street activeStreet;
     private int id;

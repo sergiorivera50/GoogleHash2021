@@ -47,5 +47,8 @@ public class Car {
     public boolean reachedDestination() {
         return this.finished;
     }
+    public int getTimeToIntersection() {
+        return this.timeToIntersection;
+    }
 
 }
