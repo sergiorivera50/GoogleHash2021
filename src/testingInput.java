@@ -16,26 +16,30 @@ public class testingInput {
         }
          **/
 
-        Parser test = new Parser("b.txt");
-        String output;
-        StringBuilder str = new StringBuilder();
 
-        str.append(test.numIntersections);
-        str.append("\n");
-        for (Intersection x : test.intersections) {
-            str.append(x.getId());
-            str.append("\n");
-            str.append(x.getInStreets().size());
-            str.append("\n");
-            for (Street i : x.getInStreets()) {
-                str.append(i.getName() + " 1");
-                str.append("\n");
-            }
-        }
-        System.out.println(str.toString());
+
         try {
-            BufferedWriter writer = new BufferedWriter(new FileWriter("1.txt", false));
-            writer.write(str.toString());
+            BufferedWriter writer = new BufferedWriter(new FileWriter("1.txt", true));
+            //writer.append(str.toString());
+            Parser test = new Parser("b.txt");
+            String output;
+
+
+            writer.append(Integer.toString(test.numIntersections));
+            writer.append("\n");
+            for (Intersection x : test.intersections) {
+                StringBuilder str = new StringBuilder();
+                str.append(x.getId());
+                str.append("\n");
+                str.append(x.getInStreets().size());
+                str.append("\n");
+                for (Street i : x.getInStreets()) {
+                    str.append(i.getName() + " 1");
+                    str.append("\n");
+                }
+                writer.append(str.toString());
+                System.out.println(x.getId());
+            }
 
         } catch (IOException e) {
             e.printStackTrace();
