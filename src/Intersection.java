@@ -14,6 +14,14 @@ public class Intersection {
         activeStreet = incoming.get(0);
     }
 
+    public int getId() {
+        return id;
+    }
+
+    public ArrayList<Street> getIncomingStreets() {
+        return inStreets;
+    }
+
     /**public ArrayList<TrafficLight> getTrafficLights() {
         return trafficLights;
     }**/
