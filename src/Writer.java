@@ -9,19 +9,23 @@ public class Writer {
                 FileOutputStream outStream = new FileOutputStream(outputFile);
                 BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(outStream));
 
-                writer.write(intersections.size());
+                writer.write(String.valueOf(intersections.size()));
                 writer.newLine();
                 for (Intersection intersection : intersections) {
-                    writer.write(intersection.getId());
+                    writer.write(String.valueOf(intersection.getId()));
+                    writer.newLine();
                     ArrayList<Street> incomingStreets = intersection.getIncomingStreets();
-                    writer.write(incomingStreets.size());
+                    writer.write(String.valueOf(incomingStreets.size()));
                     writer.newLine();
                     for (Street street : incomingStreets) {
                         writer.write(street.getName() + " 1");
                         writer.newLine();
                     }
                 }
+                writer.close();
+                outStream.close();
             }
+
         } catch (IOException e) {
             e.printStackTrace();
         }

@@ -30,6 +30,6 @@ public class testingInput {
             }
         }
         System.out.println(str.toString());
-
+        Writer writer = new Writer(test.intersections);
     }
 }
