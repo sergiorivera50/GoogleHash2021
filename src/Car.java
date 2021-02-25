@@ -8,6 +8,7 @@ public class Car {
     public Car(int numRoads, ArrayList<String> routeList) {
         this.roads = routeList;
         this.numRoads = numRoads;
+        this.currentStreet = this.roads.get(0);
     }
 
     public ArrayList<String> getRoads() {
