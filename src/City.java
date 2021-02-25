@@ -11,6 +11,7 @@ public class City {
     }
 
     public void step() {
+        /**
         for (Intersection intersection : intersections) {
             ArrayList<TrafficLight> trafficLights = intersection.getTrafficLights();
             for (TrafficLight trafficLight : trafficLights) {
@@ -18,6 +19,7 @@ public class City {
             }
         }
         time += 1;
+         **/
     }
 
     /* For the time, switches light every step (second) */
