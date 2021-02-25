@@ -13,14 +13,14 @@ public class testingInput {
         }
          **/
 
-        Parser test = new Parser("b.txt");
+        Parser test = new Parser("a.txt");
         String output;
         StringBuilder str = new StringBuilder();
 
         str.append(test.numIntersections);
         str.append("\n");
         for (Intersection x : test.intersections) {
-            str.append(x.id);
+            str.append(x.getId());
             str.append("\n");
             str.append(x.getInStreets().size());
             str.append("\n");
