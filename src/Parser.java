@@ -8,7 +8,7 @@ public class Parser {
     int numCars;
     int points;
     ArrayList<Street> streets;
-    Arraylist<Route>
+    ArrayList<Car> cars;
 
 
     Parser(String fileName) {
@@ -25,17 +25,29 @@ public class Parser {
 
     }
 
-    private Street[] registerStreets() {
-        streets = new ArrayList<>();
+    private void registerStreets() {
+        this.streets = new ArrayList<>();
         for (int i = 1; i < numStreets + 1; i++) {
             String[] streetText = rawInput.get(i);
             int start = Integer.parseInt(streetText[0]);
             int end = Integer.parseInt(streetText[4]);
             String name = streetText[2];
             int length = Integer.parseInt(streetText[3]);
-            streets.add(new Street(start, end, name, length));
+            this.streets.add(new Street(start, end, name, length));
         }
     }
 
-    private Intersection[]
+    private void registerCars() {
+        this.cars = new ArrayList<>();
+        for (int i = 1 + numStreets; i < numStreets + numCars + 1; i++) {
+            String[] carText = rawInput.get(i);
+            ArrayList<String> temp = new ArrayList<>();
+            int numRoads = Integer.parseInt(carText[0]);
+            for (int i = 1; i < carText.length; i++) {
+                temp.add(carText[i]);
+            }
+            this.cars.add(new Car(numRoads, temp));
+        }
+
+    }
 }
