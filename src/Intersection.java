@@ -21,19 +21,6 @@ public class Intersection {
         return trafficLights;
     }
 
-    public Street getStreetTo(Intersection nextIntersection) throws Exception {
-        /* Search through all the streets connected to this intersection */
-        for (Street street : streets) {
-            /* If the current street leads to the given intersection, return */
-            if (street.getEndIntersection() == nextIntersection) {
-                return street;
-            }
-        }
-
-        /* There are no streets that lead to the given intersection */
-        throw new Exception("Car can't go anywhere!");
-    }
-
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("I");

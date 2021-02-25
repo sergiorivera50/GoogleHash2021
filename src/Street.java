@@ -1,5 +1,5 @@
 public class Street {
-    private Intersection startIntersection, endIntersection;
+    private int startIntersectionId, endIntersectionId;
     private String name;
     private int length;
 
@@ -11,17 +11,17 @@ public class Street {
         this.name = name;
     }
 
-    public Street (Intersection startIntersection, Intersection endIntersection, String name, int length) {
+    public Street (int startIntersectionId, int endIntersectionId, String name, int length) {
         this.name = name;
-        this.startIntersection = startIntersection;
-        this.endIntersection = endIntersection;
+        this.startIntersectionId = startIntersectionId;
+        this.endIntersectionId = endIntersectionId;
     }
 
-    public Intersection getStartIntersection() {
-        return startIntersection;
+    public int getStartIntersection() {
+        return startIntersectionId;
     }
 
-    public Intersection getEndIntersection() {
-        return endIntersection;
+    public int getEndIntersection() {
+        return endIntersectionId;
     }
 }
