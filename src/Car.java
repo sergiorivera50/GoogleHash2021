@@ -22,4 +22,12 @@ public class Car {
     public void setRoads(ArrayList<Street> roads) {
         this.roads = roads;
     }
+
+    public void step() {
+        if (this.timeToIntersection == 0) {
+            this.currentStreet.enqueue(this);
+        }
+
+    }
+
 }

@@ -1,7 +1,12 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
+
 public class Street {
     private int startIntersectionId, endIntersectionId;
     private String name;
     private int length;
+    private Queue<Car> carQueue;
 
 
     public String getName() {
@@ -16,6 +21,7 @@ public class Street {
         this.name = name;
         this.startIntersectionId = startIntersectionId;
         this.endIntersectionId = endIntersectionId;
+        carQueue = new LinkedList();
     }
 
     public int getStartIntersection() {
@@ -24,5 +30,9 @@ public class Street {
 
     public int getEndIntersection() {
         return endIntersectionId;
+    }
+
+    public void enqueue(Car car) {
+        this.carQueue.add(car);
     }
 }
