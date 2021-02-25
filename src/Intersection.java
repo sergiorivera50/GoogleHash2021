@@ -2,16 +2,16 @@ import java.util.ArrayList;
 
 public class Intersection {
     private ArrayList<TrafficLight> trafficLights;
-    private ArrayList<Street> streets;
+    private ArrayList<Street> inStreets;
     private Street activeStreet;
     int id;
 
-    public Intersection(ArrayList<Street> connectedStreets, int id) {
+    public Intersection(ArrayList<Street> incoming, int id) {
         this.id = id;
 
         /* Get traffic lights and their streets */
         //this.trafficLights = trafficLights;
-        streets = connectedStreets;
+        inStreets = incoming;
     }
 
     /**public ArrayList<TrafficLight> getTrafficLights() {

@@ -1,3 +1,4 @@
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Parser {
@@ -9,6 +10,7 @@ public class Parser {
     int points;
     ArrayList<Street> streets;
     ArrayList<Car> cars;
+    ArrayList<Intersection> intersections;
 
 
     Parser(String fileName) {
@@ -53,5 +55,19 @@ public class Parser {
             this.cars.add(new Car(numRoads, temp));
         }
 
+    }
+
+    private void registerIntersections() {
+        this.intersections = new ArrayList<>();
+        ArrayList<Street> in;
+        for (int i = 0; i < this.numIntersections; i++) {
+            in = new ArrayList<>();
+            for (Street x : this.streets) {
+                if (x.getEndIntersection() == i) {
+                    in.add(x);
+                }
+            }
+            this.intersections.add(new Intersection(in, i));
+        }
     }
 }
