@@ -39,6 +39,11 @@ public class TrafficLight {
     }
 
     public String toString() {
+        StringBuilder str = new StringBuilder();
+        str.append(state.name());
+        str.append("[");
+        str.append(waitingCars.size());
+        str.append("]");
         return state.name();
     }
 }
