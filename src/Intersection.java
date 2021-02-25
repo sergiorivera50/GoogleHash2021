@@ -23,6 +23,11 @@ public class Intersection {
         str.append("I");
         str.append(id);
         str.append("{");
+        for (Street street : inStreets) {
+            String streetName = street.getName();
+            str.append(streetName);
+            str.append(", ");
+        }
         str.append("}\n");
         return str.toString();
     }
