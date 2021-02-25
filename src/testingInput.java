@@ -1,3 +1,6 @@
+import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
+
+import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -10,6 +13,8 @@ public class testingInput {
         **/
 
         Parser test = new Parser("a.txt");
-        System.out.println(test.numCars);
+        for (Intersection x : test.intersections) {
+            System.out.println(x.toString());
+        }
     }
 }
