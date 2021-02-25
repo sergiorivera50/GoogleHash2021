@@ -30,7 +30,7 @@ public class Parser {
         for (int i = 1; i < numStreets + 1; i++) {
             String[] streetText = rawInput.get(i);
             int start = Integer.parseInt(streetText[0]);
-            int end = Integer.parseInt(streetText[4]);
+            int end = Integer.parseInt(streetText[1]);
             String name = streetText[2];
             int length = Integer.parseInt(streetText[3]);
             this.streets.add(new Street(start, end, name, length));
