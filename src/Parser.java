@@ -8,6 +8,7 @@ public class Parser {
     int numCars;
     int points;
     ArrayList<Street> streets;
+    Arraylist
 
 
     Parser(String fileName) {
@@ -35,4 +36,6 @@ public class Parser {
             streets.add(new Street(start, end, name, length));
         }
     }
+
+    private Intersection[]
 }
