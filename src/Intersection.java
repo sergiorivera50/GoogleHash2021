@@ -24,6 +24,10 @@ public class Intersection {
         }
     }
 
+    public Street getActiveStreet() {
+        return activeStreet;
+    }
+
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append("I");
