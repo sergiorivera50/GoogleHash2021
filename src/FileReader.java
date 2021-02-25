@@ -5,7 +5,7 @@ import java.util.Scanner;
 
 public class FileReader {
     public static ArrayList<int[]> readFileAsIntArray(String fileName) {
-        File inputFile = new File ("");
+        File inputFile = new File ("fileName");
         Scanner in = null;
         try {
             in = new Scanner (inputFile);
