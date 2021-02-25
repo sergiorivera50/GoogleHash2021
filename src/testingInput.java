@@ -7,7 +7,7 @@ import java.util.Arrays;
 public class testingInput {
     public static void main(String[] args) {
 
-        Parser test = new Parser("a.txt");
+        Parser test = new Parser("b.txt");
         for (Intersection x : test.intersections) {
             System.out.println(x);
         }
