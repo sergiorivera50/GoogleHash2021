@@ -7,4 +7,8 @@ public class Intersection {
         this.trafficLights = trafficLights;
     }
 
+    public ArrayList<TrafficLight> getTrafficLights() {
+        return trafficLights;
+    }
+
 }

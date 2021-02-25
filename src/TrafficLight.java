@@ -1,9 +1,11 @@
 public class TrafficLight {
+    private Intersection intersection;
     private TrafficState state = TrafficState.RED;
     private Street street;
 
-    public TrafficLight(Street street) {
+    public TrafficLight(Street street, Intersection intersection) {
         this.street = street;
+        this.intersection = intersection;
     }
 
     public TrafficState getState() {
