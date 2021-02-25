@@ -20,7 +20,8 @@ public class Intersection {
 
     public void update() {
         if (inStreets.size() != 1) {
-            // update
+            // change activeStreet according to f(x)
+            activeStreet.dequeue();
         }
     }
 
