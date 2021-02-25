@@ -5,9 +5,16 @@ public class Intersection {
     private ArrayList<Street> streets;
     int id;
 
-    public Intersection(ArrayList<TrafficLight> trafficLights, ArrayList<Street> streets, int id) {
-        this.trafficLights = trafficLights;
+    public Intersection(ArrayList<TrafficLight> trafficLights, int id) {
         this.id = id;
+
+        /* Get traffic lights and their streets */
+        this.trafficLights = trafficLights;
+        streets = new ArrayList<>();
+        for (TrafficLight trafficLight : trafficLights) {
+            Street currentStreet = trafficLight.getStreet();
+            streets.add(currentStreet);
+        }
     }
 
     public ArrayList<TrafficLight> getTrafficLights() {

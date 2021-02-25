@@ -20,6 +20,10 @@ public class TrafficLight {
         state = newState;
     }
 
+    public Street getStreet() {
+        return street;
+    }
+
     public void switchLight() {
         if (state == TrafficState.GREEN) {
             state = TrafficState.RED;
