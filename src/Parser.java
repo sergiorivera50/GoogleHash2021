@@ -8,7 +8,7 @@ public class Parser {
     int numCars;
     int points;
     ArrayList<Street> streets;
-    Arraylist
+    Arraylist<Route>
 
 
     Parser(String fileName) {
