@@ -21,7 +21,7 @@ public class Parser {
         this.points = Integer.parseInt(info[4]);
 
         this.registerStreets();
-
+        this.registerCars();
 
     }
 
