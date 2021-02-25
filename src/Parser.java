@@ -24,6 +24,7 @@ public class Parser {
 
         this.registerStreets();
         this.registerCars();
+        this.registerIntersections();
 
     }
 

@@ -14,7 +14,7 @@ public class testingInput {
 
         Parser test = new Parser("a.txt");
         for (Intersection x : test.intersections) {
-            System.out.println(x.toString());
+            System.out.println(x);
         }
     }
 }
