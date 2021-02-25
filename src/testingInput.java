@@ -1,5 +1,8 @@
 import com.sun.xml.internal.ws.api.model.wsdl.WSDLOutput;
 
+import java.io.BufferedWriter;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.sql.SQLOutput;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +16,7 @@ public class testingInput {
         }
          **/
 
-        Parser test = new Parser("a.txt");
+        Parser test = new Parser("b.txt");
         String output;
         StringBuilder str = new StringBuilder();
 
@@ -30,6 +33,12 @@ public class testingInput {
             }
         }
         System.out.println(str.toString());
+        try {
+            BufferedWriter writer = new BufferedWriter(new FileWriter("1.txt", false));
+            writer.write(str.toString());
 
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
     }
 }
