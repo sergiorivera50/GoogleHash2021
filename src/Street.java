@@ -8,4 +8,12 @@ public class Street {
         this.startIntersection = startIntersection;
         this.endIntersection = endIntersection;
     }
+
+    public Intersection getStartIntersection() {
+        return startIntersection;
+    }
+
+    public Intersection getEndIntersection() {
+        return endIntersection;
+    }
 }

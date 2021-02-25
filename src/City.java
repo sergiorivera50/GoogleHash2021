@@ -3,12 +3,10 @@ import java.util.ArrayList;
 
 public class City {
     private ArrayList<Intersection> intersections;
-    private ArrayList<TrafficLight> trafficLights;
+    private int time = 0;
 
-    public City(ArrayList<Intersection> intersections) {
+    public City(ArrayList<Intersection> intersections, int maxTime) {
         this.intersections = intersections;
-        for (Intersection intersection : intersections) {
-            trafficLights = intersection.getTrafficLights();
-        }
+        time = maxTime;
     }
 }
