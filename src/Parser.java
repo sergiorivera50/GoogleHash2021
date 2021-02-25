@@ -41,10 +41,14 @@ public class Parser {
         this.cars = new ArrayList<>();
         for (int i = 1 + numStreets; i < numStreets + numCars + 1; i++) {
             String[] carText = rawInput.get(i);
-            ArrayList<String> temp = new ArrayList<>();
+            ArrayList<Street> temp = new ArrayList<>();
             int numRoads = Integer.parseInt(carText[0]);
-            for (int i = 1; i < carText.length; i++) {
-                temp.add(carText[i]);
+            for (int j = 1; j < carText.length; j++) {
+                for (Street x : this.streets) {
+                    if(x.getName().equals(carText[j])) {
+                        temp.add(x);
+                    }
+                }
             }
             this.cars.add(new Car(numRoads, temp));
         }

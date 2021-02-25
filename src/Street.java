@@ -3,6 +3,14 @@ public class Street {
     private String name;
     private int length;
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
     public Street (Intersection startIntersection, Intersection endIntersection, String name, int length) {
         this.name = name;
         this.startIntersection = startIntersection;
