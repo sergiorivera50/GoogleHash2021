@@ -9,6 +9,10 @@ public class Intersection {
     private Street activeStreet;
     private int id;
 
+    public int getId() {
+        return id;
+    }
+
     public Intersection(ArrayList<Street> incoming, int id) {
         this.id = id;
 
