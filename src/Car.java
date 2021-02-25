@@ -1,21 +1,23 @@
 import java.util.ArrayList;
 
 public class Car {
-    private ArrayList<String> roads;
+    private ArrayList<Street> roads;
     private int numRoads;
     private String currentStreet;
 
-    public Car(int numRoads, ArrayList<String> routeList) {
-        this.roads = routeList;
+    public Car(int numRoads, ArrayList<Street> streetList) {
         this.numRoads = numRoads;
-        this.currentStreet = this.roads.get(0);
+
+
     }
 
-    public ArrayList<String> getRoads() {
+
+
+    public ArrayList<Street> getRoads() {
         return roads;
     }
 
-    public void setRoads(ArrayList<String> roads) {
+    public void setRoads(ArrayList<Street> roads) {
         this.roads = roads;
     }
 }
