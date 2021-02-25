@@ -23,4 +23,8 @@ public class TrafficLight {
             state = TrafficState.GREEN;
         }
     }
+
+    public String toString() {
+        return state.name();
+    }
 }
