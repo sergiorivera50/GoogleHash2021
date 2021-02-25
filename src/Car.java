@@ -38,7 +38,9 @@ public class Car {
     public void step() {
         if (this.timeToIntersection == 0) {
             this.currentStreet.enqueue(this);
-        } else
+        } else {
+            this.timeToIntersection -= 1;
+        }
 
     }
 
