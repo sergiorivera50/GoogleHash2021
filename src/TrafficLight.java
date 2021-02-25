@@ -42,6 +42,11 @@ public class TrafficLight {
         return leavingCar;
     }
 
+    /* For the time it switches GREEN/RED every step */
+    public void update() {
+        this.switchLight();
+    }
+
     public String toString() {
         StringBuilder str = new StringBuilder();
         str.append(state.name());
