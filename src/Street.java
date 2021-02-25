@@ -35,4 +35,17 @@ public class Street {
     public void enqueue(Car car) {
         this.carQueue.add(car);
     }
+
+    public int getLength() {
+        return length;
+    }
+
+    public void setLength(int length) {
+        this.length = length;
+    }
+
+    public void dequeue() {
+        Car toMove = this.carQueue.remove();
+        toMove.
+    }
 }

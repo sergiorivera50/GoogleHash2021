@@ -5,11 +5,13 @@ public class Car {
     private int numRoads;
     private Street currentStreet;
     private int timeToIntersection;
+    private boolean finished;
 
     public Car(int numRoads, ArrayList<Street> streetList) {
         this.numRoads = numRoads;
         this.roads = streetList;
         this.currentStreet = this.roads.get(0);
+        this.roads.remove(0);
         this.timeToIntersection = 0;
     }
 
@@ -23,10 +25,20 @@ public class Car {
         this.roads = roads;
     }
 
+    public void nextRoad() {
+        if (this.roads.size() == 0) {
+            this.finished = true;
+        } else {
+            this.currentStreet = this.roads.get(0);
+            this.roads.remove(0);
+            this.timeToIntersection = this.currentStreet.getLength();
+        }
+    }
+
     public void step() {
         if (this.timeToIntersection == 0) {
             this.currentStreet.enqueue(this);
-        }
+        } else
 
     }
 
