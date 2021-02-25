@@ -46,6 +46,6 @@ public class Street {
 
     public void dequeue() {
         Car toMove = this.carQueue.remove();
-        toMove.
+        toMove.nextRoad();
     }
 }

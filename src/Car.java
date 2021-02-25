@@ -42,4 +42,8 @@ public class Car {
 
     }
 
+    public boolean reachedDestination() {
+        return this.finished;
+    }
+
 }
