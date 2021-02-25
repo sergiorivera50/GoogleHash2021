@@ -1,7 +1,6 @@
 import java.util.ArrayList;
 
 public class Intersection {
-    private ArrayList<TrafficLight> trafficLights;
     private ArrayList<Street> inStreets;
     private Street activeStreet;
     int id;

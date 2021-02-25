@@ -11,7 +11,6 @@ public class Car {
         this.roads = streetList;
         this.currentStreet = this.roads.get(0);
         this.timeToIntersection = 0;
-
     }
 
 

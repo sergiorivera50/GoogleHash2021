@@ -21,9 +21,4 @@ public class City {
         time += 1;
          **/
     }
-
-    /* For the time, switches light every step (second) */
-    private void update(TrafficLight trafficLight) {
-        trafficLight.update();
-    }
 }
