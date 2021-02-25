@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Intersection {
     private ArrayList<Street> inStreets;
     private Street activeStreet;
-    int id;
+    private int id;
 
     public Intersection(ArrayList<Street> incoming, int id) {
         this.id = id;

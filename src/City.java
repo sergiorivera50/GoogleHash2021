@@ -14,13 +14,16 @@ public class City {
 
     public void step() {
         /* Update intersection states */
+        System.out.println("Updating intersection states...");
         for (Intersection intersection : intersections) {
             intersection.update();
         }
 
         /* Update car positions */
+        System.out.println("Updating car positions...");
         for (Car car : cars) {
             if (car.reachedDestination()) {
+                System.out.println("A car has reached its destination.");
                 cars.remove(car);
             } else {
                 car.step();
