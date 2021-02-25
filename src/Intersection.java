@@ -11,11 +11,18 @@ public class Intersection {
         /* Get traffic lights and their streets */
         //this.trafficLights = trafficLights;
         inStreets = incoming;
+        activeStreet = incoming.get(0);
     }
 
     /**public ArrayList<TrafficLight> getTrafficLights() {
         return trafficLights;
     }**/
+
+    public void update() {
+        if (inStreets.size() != 1) {
+            // update
+        }
+    }
 
     public String toString() {
         StringBuilder str = new StringBuilder();
